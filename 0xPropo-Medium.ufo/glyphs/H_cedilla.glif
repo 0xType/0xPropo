@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Hcedilla" format="2">
+  <advance width="732"/>
+  <unicode hex="1E28"/>
+  <anchor x="366" y="0" name="bottom"/>
+  <anchor x="366" y="710" name="top"/>
+  <outline>
+    <contour>
+      <point x="193" y="27" type="line"/>
+      <point x="129" y="27" type="line"/>
+      <point x="81" y="-71" type="line"/>
+      <point x="106" y="-106" type="line"/>
+      <point x="178" y="-82"/>
+      <point x="214" y="-102"/>
+      <point x="213" y="-131" type="curve" smooth="yes"/>
+      <point x="212" y="-164"/>
+      <point x="171" y="-178"/>
+      <point x="141" y="-178" type="curve" smooth="yes"/>
+      <point x="115" y="-178"/>
+      <point x="76" y="-170"/>
+      <point x="42" y="-149" type="curve"/>
+      <point x="17" y="-202" type="line"/>
+      <point x="49" y="-223"/>
+      <point x="93" y="-238"/>
+      <point x="139" y="-238" type="curve" smooth="yes"/>
+      <point x="217" y="-238"/>
+      <point x="278" y="-197"/>
+      <point x="280" y="-127" type="curve" smooth="yes"/>
+      <point x="281" y="-87"/>
+      <point x="238" y="-34"/>
+      <point x="153" y="-46" type="curve"/>
+    </contour>
+    <component base="H"/>
+  </outline>
+</glyph>
