@@ -17,7 +17,7 @@ I like the programmatic and typewriter-like retro feel of monospace fonts, and h
 However, as the name suggests, all letters in a monospace font are the same width, so `m` and `H` are too close together, and `i` and `l` have too much space, which I found difficult to use in natural language texts.
 
 0xPropo is a font that retains the atmosphere and beauty of a monospace font and solves the above difficulties in using monospace fonts for writing natural language.
-I am using 0xPropo on [masaaki.me](https://masaaki.me/) on a trial basis, so please take a peek.
+I am using 0xPropo on [matype.xyz](https://matype.xyz/) on a trial basis, so please take a peek.
 
 ![0xPropo and 0xProto](./images/3.png)
 ![compare 0xPropo with 0xProto](./images/4.png)
