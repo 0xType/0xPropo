@@ -1,0 +1,19 @@
+{
+glyphname = Ohorn;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = O;
+},
+{
+pos = (252,-82);
+ref = horncomb.case;
+}
+);
+width = 680;
+}
+);
+unicode = 416;
+}

@@ -1,8 +1,8 @@
 FONT_NAME = 0xPropo
-TARGET_WEIGHT = Medium
-GLYPHS_FILE = $(FONT_NAME).glyphs
+FAMILIES = Medium
+SOURCE_DIR = sources
+ROMAN_GLYPHS_FILE = $(SOURCE_DIR)/$(FONT_NAME).glyphspackage
 OUTPUT_DIR = fonts
-UFO_DIR = $(FONT_NAME)-$(TARGET_WEIGHT).ufo
 WOFF2_DIR = woff2
 
 setup:
@@ -16,34 +16,32 @@ setup-woff2:
 .PHONY: build
 build:
 	$(MAKE) clean
-	$(MAKE) ufo
 	$(MAKE) compile-all
 
-ufo:
-	glyphs2ufo $(GLYPHS_FILE)
+compile-woff2-roman: $(OUTPUT_DIR)/$(FONT_NAME)-$(MAIN_WEIGHT).ttf $(OUTPUT_DIR)/$(FONT_NAME)-$(BOLD_WEIGHT).ttf
+	./woff2/woff2_compress $(OUTPUT_DIR)/$(FONT_NAME)-$(MAIN_WEIGHT).ttf
+	./woff2/woff2_compress $(OUTPUT_DIR)/$(FONT_NAME)-$(BOLD_WEIGHT).ttf
 
-compile-otf: $(FONT_NAME)-$(TARGET_WEIGHT).ufo
-	fontmake -u $(FONT_NAME)-$(TARGET_WEIGHT).ufo -o otf --output-dir $(OUTPUT_DIR)
+compile-roman: $(ROMAN_GLYPHS_FILE)
+	fontmake -a -g $(ROMAN_GLYPHS_FILE) -i --output-dir $(OUTPUT_DIR)
 
-compile-ttf: $(FONT_NAME)-$(TARGET_WEIGHT).ufo
-	fontmake -u $(FONT_NAME)-$(TARGET_WEIGHT).ufo -o ttf --output-dir $(OUTPUT_DIR)
+compile-woff2: compile-roman
+	@for family in $(FAMILIES); do \
+		./woff2/woff2_compress $(OUTPUT_DIR)/$(FONT_NAME)-$$family.ttf; \
+	done
 
-compile-woff2: $(OUTPUT_DIR)/$(FONT_NAME)-$(TARGET_WEIGHT).ttf
-	./woff2/woff2_compress $(OUTPUT_DIR)/$(FONT_NAME)-$(TARGET_WEIGHT).ttf
-
-compile-all: $(FONT_NAME)-$(TARGET_WEIGHT).ufo
-	$(MAKE) compile-otf
-	$(MAKE) compile-ttf && $(MAKE) compile-woff2
+compile-all:
+	$(MAKE) compile-woff2
 
 .PHONY: clean
 clean:
 	if [ -e $(OUTPUT_DIR) ]; then rm -rf $(OUTPUT_DIR); fi
-	if [ -e $(UFO_DIR) ]; then rm -rf $(UFO_DIR); fi
-	if [ -e $(FONT_NAME).designspace ]; then rm $(FONT_NAME).designspace; fi
 
-install-otf-font: $(OUTPUT_DIR)/$(FONT_NAME)-$(TARGET_WEIGHT).otf
-	cp $(OUTPUT_DIR)/$(FONT_NAME)-$(TARGET_WEIGHT).otf $(HOME)/Library/Fonts
+install-otf: $(OUTPUT_DIR)
+	@for family in $(FAMILIES); do \
+		cp $(OUTPUT_DIR)/$(FONT_NAME)-$$family.otf $(HOME)/Library/Fonts; \
+	done
 
-install-latest:
-	$(MAKE) build
-	$(MAKE) install-otf-font
+.PHONY: install
+install:
+	$(MAKE) build && $(MAKE) install-otf

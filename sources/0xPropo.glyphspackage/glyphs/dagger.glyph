@@ -1,0 +1,30 @@
+{
+glyphname = dagger;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(226,-20,l),
+(304,-20,l),
+(304,570,l),
+(226,570,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(440,339,l),
+(440,412,l),
+(90,412,l),
+(90,339,l)
+);
+}
+);
+width = 530;
+}
+);
+unicode = 8224;
+}

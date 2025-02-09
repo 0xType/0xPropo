@@ -1,0 +1,19 @@
+{
+glyphname = tcircumflexbelow;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = t;
+},
+{
+pos = (43,0);
+ref = circumflexbelowcomb;
+}
+);
+width = 587;
+}
+);
+unicode = 7793;
+}

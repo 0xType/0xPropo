@@ -1,0 +1,21 @@
+{
+glyphname = horncomb.case;
+layers = (
+{
+anchors = (
+{
+name = _topright;
+pos = (241,761);
+}
+);
+layerId = m01;
+shapes = (
+{
+pos = (0,211);
+ref = horncomb;
+}
+);
+width = 620;
+}
+);
+}
