@@ -1,0 +1,19 @@
+{
+glyphname = vdotbelow;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = v;
+},
+{
+pos = (7,0);
+ref = dotbelowcomb;
+}
+);
+width = 634;
+}
+);
+unicode = 7807;
+}

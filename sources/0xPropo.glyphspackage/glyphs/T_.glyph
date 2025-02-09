@@ -1,0 +1,40 @@
+{
+glyphname = T;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (330,0);
+},
+{
+name = top;
+pos = (330,710);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(379,0,l),
+(379,710,l),
+(281,710,l),
+(281,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(590,710,l),
+(70,710,l),
+(70,622,l),
+(590,622,l)
+);
+}
+);
+width = 660;
+}
+);
+unicode = 84;
+}

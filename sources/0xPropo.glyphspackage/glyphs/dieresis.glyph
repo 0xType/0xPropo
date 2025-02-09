@@ -1,0 +1,16 @@
+{
+glyphname = dieresis;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+pos = (-58,0);
+ref = dieresiscomb;
+}
+);
+width = 504;
+}
+);
+unicode = 168;
+}

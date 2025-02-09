@@ -1,0 +1,23 @@
+{
+glyphname = slash;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(100,-110,l),
+(100,-120,l),
+(201,-120,l),
+(466,740,l),
+(466,750,l),
+(365,750,l)
+);
+}
+);
+width = 566;
+}
+);
+unicode = 47;
+}

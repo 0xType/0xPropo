@@ -1,0 +1,10 @@
+{
+glyphname = wordjoiner;
+layers = (
+{
+layerId = m01;
+width = 0;
+}
+);
+unicode = 8288;
+}

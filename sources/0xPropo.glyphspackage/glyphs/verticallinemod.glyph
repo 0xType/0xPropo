@@ -1,0 +1,21 @@
+{
+glyphname = verticallinemod;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(100,750,l),
+(100,390,l),
+(200,390,l),
+(200,750,l)
+);
+}
+);
+width = 300;
+}
+);
+unicode = 712;
+}
